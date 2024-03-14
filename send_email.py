@@ -52,7 +52,7 @@ class SendMail:
             msg.attach(html_msg)
 
             server.sendmail(from_addr=self.server_login_username, to_addrs=self.to_address, msg=msg.as_string())
-            server.close()
+            server.quit()
 
 
 if __name__ == '__main__':
